@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prishtina Ime</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<!--header--->
+	<header>
+		<a href="index.html" class="logo">
+			<img src="/Foto/logo-removebg-preview.png" alt="" height="100">
+		</a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="index.html">Ballina</a></li>
+			<li><a href="historia.html">Historia</a></li>
+			<li><a href="plisat.html">Plisat</a></li>
+			<li><a href="players.html">Lojtaret</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+
+	<!--Home section--->
+	<section class="home" id="home">
+		<div class="home-text-historia">
+     
+
+            <div class="wrapper">
+                <div class="form">
+                    <div class="title">
+                        Welcome To Login
+                    </div>
+                   
+                        <div class="input_wrap">
+                            <label for="input_text">Email or Username</label>
+                            <div class="input_field">
+                                <input type="text" placeholder="Enter user name here" id="email" class="tb" />
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <label for="input_password">Password</label>
+                            <div class="input_field">
+                               <input type="password" placeholder="Enter Password here" id="pwd1" class="tb" />
+                            </div>
+                        </div>
+                        <div class="input_wrap">
+                            <div class="grid-container">
+                                <div class="grid-item">
+                                    <input type="submit" value="Login" class="btn"  onclick="this.style.backgroundColor = '#000';  this.style.color = '#FFF'; login();"/>
+                                </div>
+                                <div class="grid-item">
+                                    <a href="./Register.html">
+
+                                        <input type="submit" value="Register" class="btn"/>
+                                    </a>
+                                </div>
+                                 
+                              </div>
+                              
+       
+        <input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+                        </div>
+                   
+                </div>
+            </div> 
+
+
+            <!-- Main div code -->
+	
+
+        </div>
+
+        
+        </section>
+		<!--footer--->
+	<section id="contact">
+		<div class="footer">
+			<div class="main">
+				
+
+
+				<div class="list">
+					<h4>Kontakti</h4>
+					<ul>
+						<li><a href="#">Prishtina	</a></li>
+						<li><a href="#">049123456</a></li>
+						
+					</ul>
+				</div>
+
+				<div class="list">
+					<h4>Lidhja</h4>
+					<div class="social">
+						<a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="end-text">
+			<p>Erion Gashi, Olti Ahmeti, Velsa Kamberi</p>
+		</div>
+	</section>
+
+
+       
+
+
+
+        <script>
+ function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 5 || pwd.length > 9)
+		{
+			alert("Password min and max length is 5-9.");
+		}
+		else
+		{
+	alert('Thank You for Login & You are Redirecting to KB-Prishtina');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "index.html";
+			}
+	}
+	//Reset Inputfield code.
+	function clearFunc()
+	{
+		document.getElementById("email").value="";
+		document.getElementById("pwd1").value="";
+	}	
+	
+
+        </script>
+
+	
+
+
+	<!--link to js--->
+	<script type="text/javascript" src="js/indexscript.js"></script>
+
+</body>
+</html>
